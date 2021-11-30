@@ -6,9 +6,9 @@ phases:
       - npm install
   pre_build:
     commands:
-      - sed -i "s|_DB_CONNECTION_STRING_|${DBConnectionString}|g" app.js
-      - sed -i "s|_AWS_ACCESS_KEY_|${PixelisticAccesKey}|g" const/aws-config.json
-      - sed -i "s|_AWS_SECRET_KEY_|${PixelisticSecretKey}|g" const/aws-config.json
+      - sed -i "s|_DB_CONNECTION_STRING_|$DBConnectionString|g" app.js
+      - sed -i "s|_AWS_ACCESS_KEY_|$PixelisticAccesKey|g" const/aws-config.json
+      - sed -i "s|_AWS_SECRET_KEY_|$PixelisticSecretKey|g" const/aws-config.json
 artifacts:
   files:
     - '**/*'
